@@ -1,8 +1,9 @@
 import 'package:flutterlabbatrakov/icons.dart';
 import 'package:flutter/material.dart';
 
-import 'appbar/avatar.dart';
-import 'appbar/name.dart';
+import 'topsection/avatar.dart';
+import 'topsection/name.dart';
+import 'topsection/tabs.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,15 +37,11 @@ class MyApp extends StatelessWidget {
         ),
         body: Column(
           children: [
+            Center(child: Avatar()),
+            Center(child: Name()),
             Padding(
-              padding: EdgeInsets.only(left: MediaQuery.of(context).size.width / 4,),
-              child: Avatar()
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: MediaQuery.of(context).size.width / 4,
-              top: 20),
-              child: Name()
-            )
+              padding:EdgeInsets.only(top: 40),
+              child: Tabs()),
           ]
         )
       )
