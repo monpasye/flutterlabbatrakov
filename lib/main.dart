@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'topsection/avatar.dart';
 import 'topsection/name.dart';
 import 'topsection/tabs.dart';
+import 'carousel/carousel.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,8 +41,10 @@ class MyApp extends StatelessWidget {
             Center(child: Avatar()),
             Center(child: Name()),
             Padding(
-              padding:EdgeInsets.only(top: 40),
+              padding:EdgeInsets.only(top: 40,
+              bottom: 60),
               child: Tabs()),
+            Carousel()
           ]
         )
       )
